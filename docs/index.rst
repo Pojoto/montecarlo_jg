@@ -5,6 +5,9 @@
 
 Welcome to montecarlo_joshuagao's documentation!
 =========================================================
+montecarlo_jg is a Python package designed to provide tools to manipulate and calculate certain 
+quantities related to Ising Hamiltonians, usually in a graph form.
+
 
 .. toctree::
    :maxdepth: 2
@@ -12,7 +15,7 @@ Welcome to montecarlo_joshuagao's documentation!
 
    getting_started
    api
-
+   about
 
 
 Indices and tables
