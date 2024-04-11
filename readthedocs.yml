@@ -15,8 +15,8 @@ build:
 #       path: .
 
 # Build documentation in the docs/ directory with Sphinx
- sphinx:
-   configuration: docs/conf.py
+sphinx:
+  configuration: docs/conf.py
 
 
 conda:
