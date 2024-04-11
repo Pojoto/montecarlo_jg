@@ -10,8 +10,6 @@ dependencies:
   - matplotlib
   - networkx
 
-
-
     # Pip-only installs
   - pip:
     - sphinx-autoapi
