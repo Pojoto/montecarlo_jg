@@ -57,7 +57,7 @@ class BitString:
         return total
  
 
-    def set_config(self, s:list):
+    def set_config(self, s:list[int]):
         self.config = s;
         
     def set_int_config(self, dec:int):
