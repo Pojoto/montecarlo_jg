@@ -14,9 +14,9 @@ quantities related to Ising Hamiltonians, usually in a graph form.
    :caption: Contents:
 
    getting_started
-   api
    about
-   ising
+   .. ising
+   api
 
 
 Indices and tables
