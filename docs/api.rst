@@ -5,3 +5,4 @@ API Documentation
    :toctree: autosummary
 
    montecarlo_jg.canvas
+   montecarlo_jg.zen
