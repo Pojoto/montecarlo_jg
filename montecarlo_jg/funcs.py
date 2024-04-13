@@ -25,6 +25,19 @@ def canvas(with_attribution=True):
 
 
 def zen(with_attribution=True):
+    """
+    Function to display Python's zen quote.
+
+    Parameters
+    ----------
+    with_attribution : bool, Optional, default: True
+        Set whether or not to display who the quote is from.
+
+    Returns
+    -------
+    quote : str
+        The official Python 'zen' principles.
+    """
     quote = """Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
