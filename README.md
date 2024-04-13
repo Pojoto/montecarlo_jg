@@ -29,6 +29,10 @@ To switch to an existing branch, use
 `git checkout new_branch_name`
 
 
+The documentation can be found [here.](https://montecarlo-pojoto.readthedocs.io/en/latest/index.html)
+
+
+
 ### Copyright
 
 Copyright (c) 2024, Joshua Gao
