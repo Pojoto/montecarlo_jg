@@ -26,7 +26,7 @@ requires-python = ">=3.8"
 
 # Update the urls once the hosting is set up.
 #[project.urls]
-#"Source" = "https://github.com/<username>/montecarlo_jg/"
+#"Source" = "https://github.com/Pojoto/montecarlo_jg/"
 #"Documentation" = "https://montecarlo_jg.readthedocs.io/"
 
 [project.optional-dependencies]
