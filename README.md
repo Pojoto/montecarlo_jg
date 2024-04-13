@@ -1,8 +1,9 @@
 montecarlo_joshuagao
 ==============================
 [//]: # (Badges)
-[![GitHub Actions Build Status](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/montecarlo_jg/workflows/CI/badge.svg)](https://github.com/Pojoto/montecarlo_jg/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/montecarlo_joshuagao/branch/main/graph/badge.svg)](https://codecov.io/gh/Pojoto/montecarlo_joshuagao/branch/main)
+[![docs](https://readthedocs.org/projects/pip/badge/?version=latest)](https://montecarlo-pojoto.readthedocs.io/)
+[![GitHub Actions Build Status](https://github.com/Pojoto/montecarlo_jg/workflows/CI/badge.svg)](https://github.com/Pojoto/montecarlo_jg/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/Pojoto/montecarlo_joshuagao/branch/main/graph/badge.svg)](https://codecov.io/gh/Pojoto/montecarlo_joshuagao/branch/main)
 
 
 A package for working with energy calculations on Ising Hamiltonians
