@@ -14,14 +14,14 @@ A package for working with energy calculations on Hamiltonians derived from Isin
 
 in the repository directory.
 
-### Dependencies
+## Dependencies
 This package requires the following:
   - NumPy
   - matplotlib
   - networkx
 
 
-### Adding Features
+## Adding Features
 Features should be developed on branches. 
 To create and switch to a branch, use the command
 
@@ -32,10 +32,9 @@ To switch to an existing branch, use
 `git checkout new_branch_name`
 
 
-### Documentation
+## Documentation
 
-The documentation for this project is hosted through ReadTheDocs, and can be found [here.](https://montecarlo-pojoto.readthedocs.io/en/latest/index.html)
-
+The documentation for this project is hosted through Read the Docs, and can be found [here.](https://montecarlo-pojoto.readthedocs.io/en/latest/index.html)
 
 #### Acknowledgements
  
