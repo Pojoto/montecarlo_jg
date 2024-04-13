@@ -14,6 +14,11 @@ This repository is currently under development. To do installation in developmen
 in the repository directory.
 
 
+This package requires the following:
+  - NumPy
+  - matplotlib
+  - networkx
+
 ### Copyright
 
 Copyright (c) 2024, Joshua Gao
