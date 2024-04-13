@@ -16,6 +16,7 @@ quantities related to Ising Hamiltonians, usually in a graph form.
    getting_started
    api
    about
+   ising
 
 
 Indices and tables
