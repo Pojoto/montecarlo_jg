@@ -23,6 +23,47 @@ def get_IsingHamiltonian(G, mus=None):
         J[e[1]].append((e[0], G.edges[e]['weight']))
     return montecarlo.IsingHamiltonian(J,mus)
 
+def test_BitString():
+    my_bs = montecarlo.BitString(8)
+    my_bs.flip_site(2)
+    my_bs.flip_site(2)
+    my_bs.flip_site(2)
+    my_bs.flip_site(7)
+    my_bs.flip_site(0)
+    assert(len(my_bs) == 8)
+
+    my_bs = montecarlo.BitString(13)
+    my_bs.set_config([0,1,1,0,0,1,0,0,1,0,1,0,0])
+
+    assert(my_bs.on() == 5)
+    assert(my_bs.off() == 8)
+
+    assert(my_bs.int() == 3220)
+
+    my_bs = montecarlo.BitString(20)
+    my_bs.set_int_config(3221)
+
+    # Let's make sure this worked:
+    tmp = np.array([0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,1,0,1,0,1])
+    assert((my_bs.config == tmp).all())
+
+    # We can provide an even stronger test here:
+    for i in range(1000):
+        my_bs.set_int_config(i) # Converts from integer to binary
+        assert(my_bs.int() == i) # Converts back from binary to integer and tests
+
+    my_bs1 = montecarlo.BitString(13)
+    my_bs1.set_config([0,1,1,0,0,1,0,1,1,0,1,0,0])
+
+    my_bs2 = montecarlo.BitString(13)
+    my_bs2.set_int_config(3252)
+
+    assert(my_bs1 == my_bs2)
+
+    my_bs2.flip_site(5)
+    assert(my_bs1 != my_bs2)
+
+
 
 def test_IsingHamiltonian():
     """Test that the BitString class does what we expect."""
@@ -41,12 +82,6 @@ def test_IsingHamiltonian():
 
     # Compute the average values for Temperature = 1
     E, M, HC, MS = ham.compute_average_values(1)
-
-
-    # print(" E  = %12.8f" %E)
-    # print(" M  = %12.8f" %M)
-    # print(" HC = %12.8f" %HC)
-    # print(" MS = %12.8f" %MS)
 
     assert(np.isclose(E,  -11.95991923))
     assert(np.isclose(M,   -0.00000000))
