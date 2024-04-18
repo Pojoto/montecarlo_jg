@@ -1,8 +1,7 @@
-API Documentation
-=================
+.. API Documentation
+.. =================
+ autosummary::
+   .. :toctree: autosummary
 
-.. autosummary::
-   :toctree: autosummary
-
-   montecarlo_jg.canvas
-   montecarlo_jg.zen
+   .. montecarlo_jg.canvas
+   .. montecarlo_jg.zen
