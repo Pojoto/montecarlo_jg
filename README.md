@@ -17,8 +17,6 @@ in the repository directory.
 ## Dependencies
 This package requires the following:
   - NumPy
-  - matplotlib
-  - networkx
 
 
 ## Adding Features
