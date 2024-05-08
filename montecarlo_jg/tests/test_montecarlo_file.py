@@ -4,6 +4,7 @@ Unit and regression test for the montecarlo_file module.
 
 # Import package, test suite, and other packages as needed
 import numpy as np
+import networkx as nx
 import montecarlo_jg as montecarlo
 
 def get_IsingHamiltonian(G, mus=None):
