@@ -11,6 +11,7 @@ dependencies:
 
     # Package dependencies
   - numpy
+  - networkx
 
     # Testing
   - pytest
