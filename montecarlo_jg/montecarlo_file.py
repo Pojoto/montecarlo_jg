@@ -7,20 +7,38 @@ class BitString:
     Simple class to implement a config of bits
     """
     def __init__(self, N):
+        """Constructor for BitString objects
+
+        Parameters
+        ----------
+        N   : number
+            Length of bitstring
+        """
         self.N = N
         self.config = np.zeros(N, dtype=int) 
 
-    def __repr__(self):
-        pass
-
     def __str__(self):
+        """
+        Print dunder method to display bitstring
+        """
         string = ""
         for zero in self.config:
             string += str(zero)
         return string
 
     def __eq__(self, other):        
-        
+        """
+        Check if two BitString objects are equal
+
+        Parameters
+        ----------
+        other   : Bitstring
+            other Bitstring
+        Returns
+        -------
+        equality  : boolean
+            Boolean value showing equality or not
+        """
         self_dec = self.int()
         other_dec = other.int()
 
@@ -28,9 +46,25 @@ class BitString:
 
     
     def __len__(self):
+        """
+        Calculate the length of a BitString object
+
+        Returns
+        -------
+        length  : number
+            Length of the bitstring
+        """
         return len(self.config)
 
     def on(self):
+        """
+        Calculate the number of bits of value 1 in the bitstring
+
+        Returns
+        -------
+        ons  : number
+            Number of 1 bits
+        """
         total = 0
         for bit in self.config:
             if bit == 1:
@@ -38,6 +72,14 @@ class BitString:
         return total
     
     def off(self):
+        """
+        Calculate the number of bits of value 1 in the bitstring
+
+        Returns
+        -------
+        ons  : number
+            Number of 1 bits
+        """
         total = 0
         for bit in self.config:
             if bit == 0:
@@ -45,10 +87,26 @@ class BitString:
         return total
     
     def flip_site(self,i):
+        """
+        Flip a bit at a given index
+
+        Parameters
+        ----------
+        i   : number
+            index to flip
+        """
         self.config[i] = (self.config[i] + 1) % 2
             
     
     def int(self):
+        """
+        Calculate the actual integer value of the current bitstring
+
+        Returns
+        ----------
+        int   : number
+            Integer value
+        """
         temp = self.config[::-1]
         total = 0
         for i, bit in enumerate(temp):
@@ -58,9 +116,25 @@ class BitString:
  
 
     def set_config(self, s:list[int]):
+        """
+        Set the bitstring by inputting a list
+
+        Parameters
+        ----------
+        s   : list of ints
+            List of bit values to configure
+        """
         self.config = s;
         
     def set_int_config(self, dec:int):
+        """
+        Set the bitstring to match a given integer
+
+        Parameters
+        ----------
+        dec   : integer
+            Integer for the bitstring to match value of
+        """
         bits = []
         for bit in self.config:
             remainder = dec % 2
@@ -72,8 +146,20 @@ class BitString:
 
 
 class IsingHamiltonian:
-
+    """
+    Class that represents an Ising Hamiltonian and provides various operations along with it.
+    """
     def __init__(self, G: list[list[int]], mus: list[int]):
+        """
+        Constructor for IsingHamiltonians
+        
+        Parameters
+        ----------
+        G    : Graph
+            input graph defining the Hamiltonian
+        mus   : Bitstring
+            input configuration
+        """
         self.G = G
 
         self.bs = BitString(len(mus))
@@ -85,12 +171,6 @@ class IsingHamiltonian:
             .. math::
                 E = \\left<\\hat{H}\\right>
 
-        Parameters
-        ----------
-        bs   : Bitstring
-            input configuration
-        G    : Graph
-            input graph defining the Hamiltonian
         Returns
         -------
         energy  : float
@@ -120,10 +200,6 @@ class IsingHamiltonian:
 
         Parameters
         ----------
-        bs   : Bitstring
-            input configuration
-        G    : Graph
-            input graph defining the Hamiltonian
         T    : float
             temperature of the system
         Returns
