@@ -7,7 +7,8 @@ class BitString:
     Simple class to implement a config of bits
     """
     def __init__(self, N):
-        """Constructor for BitString objects
+        """
+        Constructor for BitString objects
 
         Parameters
         ----------
