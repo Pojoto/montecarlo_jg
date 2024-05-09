@@ -18,6 +18,18 @@ class BitString:
         self.N = N
         self.config = np.zeros(N, dtype=int) 
 
+    def init(self, N):
+        """
+        Constructor for BitString objects
+
+        Parameters
+        ----------
+        N   : number
+            Length of bitstring
+        """
+        pass
+
+
     def __str__(self):
         """
         Print dunder method to display bitstring
@@ -165,6 +177,19 @@ class IsingHamiltonian:
 
         self.bs = BitString(len(mus))
         self.bs.set_config(mus)
+
+    def init(self, G: list[list[int]], mus: list[int]):
+        """
+        Constructor for IsingHamiltonians
+        
+        Parameters
+        ----------
+        G    : Graph
+            input graph defining the Hamiltonian
+        mus   : Bitstring
+            input configuration
+        """
+        pass
     
     def energy(self):
         """Compute energy of configuration, `bs`
