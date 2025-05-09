@@ -8,7 +8,7 @@ montecarlo_joshuagao
 
 A package for working with energy calculations on Hamiltonians derived from Ising models. This package was created as part of Virginia Tech's CHEM 3684 Quantum Software class.
 
-*This repository is currently under development*. To do installation in development mode, download this repository and type
+To do installation in development mode, download this repository and type
 
 `pip install -e .`
 
